@@ -147,7 +147,7 @@ const PricingSection = () => {
                   <Button 
                     className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-foreground'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground'
                         : 'bg-gray-800 hover:bg-gray-700 text-foreground border border-gray-600'
                     }`}
                   >

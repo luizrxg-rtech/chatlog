@@ -37,9 +37,9 @@ const HeroSection = () => {
     <section
       id="inicio"
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary-950/20 pt-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary-950/20 lg:pt-20"
     >
-      <div className="container mx-auto px-4 pb-20 pt-8">
+      <div className="container mx-auto px-4 pb-20 pt-2 lg:pt-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -92,7 +92,7 @@ const HeroSection = () => {
               <a href="#precos">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:bg-foreground text-foreground px-8 py-4 text-lg group"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 px-8 py-4 text-lg group "
                 >
                   {t("teste_gratis")}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -213,9 +213,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 1 + (index * 0.1), duration: 0.6 }}
-              className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-500/10 to-primary-700/10 rounded-xl p-6"
+              className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-600/10 to-primary-500/10 rounded-xl p-6"
             >
-              <div className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-2">
+              <div className="w-fit text-4xl font-bold bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-muted-foreground text-sm">

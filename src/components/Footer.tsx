@@ -129,7 +129,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/20 rounded-xl p-6 mb-8"
+          className="bg-gradient-to-r from-primary-600/10 to-primary-500/10 border border-primary-500/20 rounded-xl p-6 mb-8"
         >
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
@@ -149,7 +149,7 @@ const Footer = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
                 {t("inscrever")}
               </motion.button>

@@ -88,16 +88,16 @@ const AgentModelsSection = () => {
               transition={{ delay: 0.1 * index, duration: 0.6 }}
               className="group"
             >
-              <div className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-500/10 to-primary-700/10 rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300">
+              <div className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-600/10 to-primary-500/10 rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300"
                 >
-                  <model.icon className="w-6 h-6 text-foreground" />
+                  <model.icon className="w-6 h-6 text-foreground " />
                 </motion.div>
 
-                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary-400 transition-colors">
+                <h3 className="w-fit text-lg font-semibold text-foreground mb-3 bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text group-hover:text-transparent transition-colors">
                   {model.title}
                 </h3>
 

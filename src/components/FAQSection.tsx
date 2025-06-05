@@ -129,7 +129,7 @@ const FAQSection = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/20 rounded-xl p-8 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-primary-600/10 to-primary-500/10 border border-primary-500/20 rounded-xl p-8 max-w-2xl mx-auto">
             <div className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-600/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
               <HelpCircle className="w-8 h-8 text-primary-400" />
             </div>
@@ -143,7 +143,7 @@ const FAQSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-700 hover:to-primary-800 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
                 {t("falar_especialista")}
               </motion.button>
