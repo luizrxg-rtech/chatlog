@@ -33,13 +33,13 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`max-w-fit mx-auto fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
+      className={`mx-auto md:max-w-[1420px] md:fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/70 backdrop-blur-xl border border-border/20 rounded-2xl shadow-lg shadow-black/20' 
+          ? 'md:bg-background/70 md:backdrop-blur-xl md:rounded-2xl md:shadow-lg md:shadow-black/20' 
           : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-3">
+      <div className="w-full mx-auto p-6 md:py-3 ">
         <div className="flex items-center justify-between space-x-8">
           {/* Logo */}
           <motion.div
@@ -80,9 +80,11 @@ const Header = () => {
               </SelectContent>
             </Select>
 
-            <Button className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 hover:to-primary-900">
-              <a href="#precos">{t("comecar_agora")}</a>
-            </Button>
+            <a href="#precos">
+              <Button className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900">
+                {t("comecar_agora")}
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}

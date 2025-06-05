@@ -126,55 +126,6 @@ const BenefitsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Para Quem é o ChatLog? */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-20"
-        >
-          <div className=" rounded-2xl p-8 max-w-fit mx-auto">
-            <motion.h3
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 1, duration: 0.6 }}
-              className="text-2xl font-bold text-center text-foreground mb-8"
-            >
-              {t("para_quem_chatlog_start")}{" "}
-              <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-                {t("app_name")}
-              </span>
-              {t("para_quem_chatlog_end")}
-            </motion.h3>
-
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className="space-y-8"
-            >
-              {[
-                { text: t("empresa_otimizar"), icon: Building },
-                { text: t("ecommerce_automatizar"), icon: ShoppingCart },
-                { text: t("startup_escalar"), icon: Users },
-                { text: t("agencias_solucoes"), icon: Briefcase },
-                { text: t("clinicas_volume"), icon: Hospital }
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 1.2 + (index * 0.1), duration: 0.5 }}
-                  className="flex items-center gap-6"
-                >
-                  <item.icon className="w-8 h-8 text-primary" />
-                  <span className="text-lg text-muted-foreground">{item.text}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

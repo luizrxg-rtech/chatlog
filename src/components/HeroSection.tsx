@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, MessageCircle, Zap, Shield } from "lucide-react";
+import {ArrowRight, MessageCircle, Zap, Shield, Brain} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -74,20 +74,24 @@ const HeroSection = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 hover:to-primary-900 text-white px-8 py-4 text-lg group"
-              >
-                <a href="#precos">{t("teste_gratis")}</a>
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="ghost"
-                className="border-primary-500 text-primary-400 hover:bg-primary-500/10 px-8 py-4 text-lg"
-              >
-                <a href="#precos">{t("saiba_mais")}</a>
-              </Button>
+              <a href="#precos">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:bg-white text-white px-8 py-4 text-lg group"
+                >
+                  {t("teste_gratis")}
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#precos">
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  className="border-primary-500 text-primary-400 hover:bg-primary-500/10 px-8 py-4 text-lg"
+                >
+                    {t("saiba_mais")}
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -167,9 +171,9 @@ const HeroSection = () => {
                   ease: "easeInOut",
                   delay: 0.5,
                 }}
-                className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-500 rounded-full flex items-center justify-center shadow-lg"
               >
-                <MessageCircle className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" />
               </motion.div>
             </div>
           </motion.div>
@@ -183,20 +187,20 @@ const HeroSection = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"
         >
           {stats.map((stat, index) => (
-              <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 1 + (index * 0.1), duration: 0.6 }}
-                  className="bg-card border border-border rounded-xl p-6"
-              >
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-muted-foreground text-sm">
-                  {stat.label}
-                </div>
-              </motion.div>
+            <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 1 + (index * 0.1), duration: 0.6 }}
+                className="bg-card border border-border rounded-xl p-6"
+            >
+              <div className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-2">
+                {stat.number}
+              </div>
+              <div className="text-muted-foreground text-sm">
+                {stat.label}
+              </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

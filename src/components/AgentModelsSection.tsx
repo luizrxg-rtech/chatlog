@@ -88,7 +88,7 @@ const AgentModelsSection = () => {
               transition={{ delay: 0.1 * index, duration: 0.6 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10">
+              <div className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-500/10 to-primary-700/10 rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}

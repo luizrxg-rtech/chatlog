@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require('tailwindcss/colors')
 
 export default {
 	darkMode: ["class"],
@@ -30,18 +31,29 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					50: '#f0fffe',
-					100: '#ccfffe',
-					200: '#99ffff',
-					300: '#5cfffe',
-					400: '#06f4f4',
-					500: '#09ffff',
-					600: '#00cccc',
-					700: '#0599a3',
-					800: '#0f7983',
-					900: '#13646c',
-					950: '#053f42',
+					50: colors.green[50],
+					100: colors.green[100],
+					200: colors.green[200],
+					300: colors.green[300],
+					400: colors.green[400],
+					500: colors.green[500],
+					600: colors.indigo[600],
+					700: colors.indigo[700],
+					800: colors.indigo[800],
+					900: colors.indigo[900],
+					950: colors.indigo[950],
 				},
+				// 50: '#f0fffe',
+				// 100: '#ccfffe',
+				// 200: '#99ffff',
+				// 300: '#5cfffe',
+				// 400: '#06f4f4',
+				// 500: '#09ffff',
+				// 600: '#00cccc',
+				// 700: '#0599a3',
+				// 800: '#0f7983',
+				// 900: '#13646c',
+				// 950: '#053f42',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
