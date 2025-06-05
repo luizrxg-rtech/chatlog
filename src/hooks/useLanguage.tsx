@@ -38,6 +38,7 @@ const translations = {
     chat_ola: "Olá! Como posso ajudá-lo hoje?",
     chat_preciso: "Preciso de informações sobre seus produtos",
     chat_claro: "Claro! Aqui estão nossos principais produtos...",
+    digite_mensagem: "Digite sua mensagem...",
 
     // Features
     recursos_poderosos: "Recursos Poderosos",
@@ -243,6 +244,7 @@ const translations = {
     chat_ola: "Hello! How can I help you today?",
     chat_preciso: "I need information about your products",
     chat_claro: "Sure! Here are our main products...",
+    digite_mensagem: "Type your message...",
 
     // Features
     recursos_poderosos: "Powerful Features",
