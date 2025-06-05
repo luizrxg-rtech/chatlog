@@ -42,13 +42,6 @@ const FeaturesSection = () => {
     }
   ];
 
-  const stats = [
-    { number: "70%", label: t("reducao_tempo") },
-    { number: "50%", label: t("aumento_satisfacao") },
-    { number: "60%", label: t("economia_custos") },
-    { number: "24/7", label: t("suporte_disponivel") }
-  ]
-
   return (
     <section id="recursos" ref={ref} className="py-20 pt-32 bg-gradient-to-b from-background to-primary-950/10">
       <div className="container mx-auto px-4">
@@ -120,31 +113,6 @@ const FeaturesSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 1 + (index * 0.1), duration: 0.6 }}
-              className="bg-card border border-border rounded-xl p-6"
-            >
-              <div className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-2">
-                {stat.number}
-              </div>
-              <div className="text-muted-foreground text-sm">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
