@@ -1,0 +1,219 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ArrowRight, MessageCircle, Zap, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
+
+const HeroSection = () => {
+  const { t } = useLanguage();
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true, 
+  });
+
+  return (
+    <section
+      id="inicio"
+      ref={ref}
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary-950/20 pt-20"
+    >
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium"
+            >
+              <Zap className="w-4 h-4 mr-2" />
+              {t("revolucione_atendimento")}
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-5xl lg:text-6xl font-bold leading-tight"
+            >
+              <span className="text-foreground">
+                {t("automatize_conversas")}
+              </span>
+              {" "}
+              <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                {t("chatbot_inteligente")}
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-xl text-muted-foreground leading-relaxed max-w-lg"
+            >
+              {t("otimize_comunicacao")}
+            </motion.p>
+
+            {/* Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-primary-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">{t("online_24_7")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("sempre_disponivel")}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-primary-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">{t("ia_inteligente")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("respostas_precisas")}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-primary-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">{t("seguro")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("dados_protegidos")}</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 hover:to-primary-900 text-white px-8 py-4 text-lg group"
+              >
+                {t("teste_gratis")}
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary-500 text-primary-400 hover:bg-primary-500/10 px-8 py-4 text-lg"
+              >
+                {t("ver_demo")}
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Content - ChatBot Illustration */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl max-w-sm mx-auto">
+                <div className="bg-background rounded-2xl p-6 h-96 overflow-hidden">
+                  <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Chatlog</h3>
+                      <p className="text-xs text-green-500">• Online</p>
+                    </div>
+                  </div>
+
+                  {/* Chat messages */}
+                  <div className="space-y-4">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1, duration: 0.5 }}
+                      className="bg-primary-500/10 border border-primary-500/20 rounded-lg p-3 max-w-xs"
+                    >
+                      <p className="text-sm">{t("chat_ola")}</p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1.3, duration: 0.5 }}
+                      className="bg-muted rounded-lg p-3 max-w-xs ml-auto"
+                    >
+                      <p className="text-sm">{t("chat_preciso")}</p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1.6, duration: 0.5 }}
+                      className="bg-primary-500/10 border border-primary-500/20 rounded-lg p-3 max-w-xs"
+                    >
+                      <p className="text-sm">{t("chat_claro")}</p>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+              {/* Floating elements */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg"
+              >
+                <Zap className="w-8 h-8 text-white" />
+              </motion.div>
+                
+              <motion.div
+                animate={{
+                  y: [0, 10, 0],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
+                className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center shadow-lg"
+              >
+                <MessageCircle className="w-6 h-6 text-white" />
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/*<iframe id="widget-iframe"
+            src="https://platform.zaia.app/embed/chat/50754"
+            style={{width: "400px", height: "600px", borderRadius: "20px", border: "1px #eee solid"}}
+          >
+          </iframe>*/}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
