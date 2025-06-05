@@ -204,12 +204,6 @@ const HeroSection = () => {
               </motion.div>
             </div>
           </motion.div>
-
-          {/*<iframe id="widget-iframe"
-            src="https://platform.zaia.app/embed/chat/50754"
-            style={{width: "400px", height: "600px", borderRadius: "20px", border: "1px #eee solid"}}
-          >
-          </iframe>*/}
         </div>
       </div>
     </section>
