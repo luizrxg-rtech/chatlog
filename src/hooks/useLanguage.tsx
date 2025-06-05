@@ -12,6 +12,7 @@ const translations = {
   pt: {
     //Global
     app_name: "Chatlog",
+    rtech: "RTech",
 
     // Header
     inicio: "Início",
@@ -27,7 +28,7 @@ const translations = {
     chatbot_inteligente: "chatbot inteligente",
     otimize_comunicacao: "Otimize a comunicação com seus clientes utilizando chatbots personalizados e atendimento humano integrado, tudo em um único número de WhatsApp.",
     testar_gratis: "Testar Grátis",
-    ver_demo: "Ver Demo",
+    saiba_mais: "Saiba mais",
     sempre_disponivel: "Sempre disponível",
     ia_inteligente: "IA Inteligente",
     respostas_precisas: "Respostas precisas",
@@ -213,7 +214,9 @@ const translations = {
     ingles: "English"
   },
   en: {
+    //Global
     app_name: "Chatlog",
+    rtech: "RTech",
 
     // Header
     inicio: "Home",
@@ -229,7 +232,7 @@ const translations = {
     chatbot_inteligente: "intelligent chatbot",
     otimize_comunicacao: "Optimize communication with your customers using personalized chatbots and integrated human service, all on a single WhatsApp number.",
     testar_gratis: "Try Free",
-    ver_demo: "View Demo",
+    saiba_mais: "Learn more",
     sempre_disponivel: "Always available",
     ia_inteligente: "Intelligent AI",
     respostas_precisas: "Accurate responses",

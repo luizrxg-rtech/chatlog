@@ -78,15 +78,15 @@ const HeroSection = () => {
                 size="lg"
                 className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 hover:to-primary-900 text-white px-8 py-4 text-lg group"
               >
-                {t("teste_gratis")}
+                <a href="#precos">{t("teste_gratis")}</a>
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 size="lg"
-                variant="outline"
+                variant="ghost"
                 className="border-primary-500 text-primary-400 hover:bg-primary-500/10 px-8 py-4 text-lg"
               >
-                {t("ver_demo")}
+                <a href="#precos">{t("saiba_mais")}</a>
               </Button>
             </motion.div>
           </motion.div>

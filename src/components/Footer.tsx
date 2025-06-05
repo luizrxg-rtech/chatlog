@@ -165,11 +165,10 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © {currentYear} {t("app_name")}. {t("todos_direitos")}
+              © {currentYear} {t("rtech")}. {t("todos_direitos")}
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-              <span>🇧🇷 {t("portugues_brasil")}</span>
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-primary-400 transition-colors">
                   {t("privacidade")}

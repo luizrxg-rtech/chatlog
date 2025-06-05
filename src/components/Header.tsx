@@ -81,7 +81,7 @@ const Header = () => {
             </Select>
 
             <Button className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 hover:to-primary-900">
-              {t("comecar_agora")}
+              <a href="#precos">{t("comecar_agora")}</a>
             </Button>
           </nav>
 
