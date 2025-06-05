@@ -94,7 +94,7 @@ const AgentModelsSection = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                   className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300"
                 >
-                  <model.icon className="w-6 h-6 text-white" />
+                  <model.icon className="w-6 h-6 text-foreground" />
                 </motion.div>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary-400 transition-colors">

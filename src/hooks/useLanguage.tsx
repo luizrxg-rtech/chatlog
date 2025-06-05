@@ -13,6 +13,8 @@ const translations = {
     //Global
     app_name: "Chatlog",
     rtech: "RTech",
+    instagram_url: "https://www.instagram.com/rtech_solution",
+    linkedin_url: "https://www.linkedin.com/company/r-techsolution",
 
     // Header
     inicio: "Início",
@@ -127,6 +129,7 @@ const translations = {
     comecar_agora: "Começar Agora",
     escolher_plano: "Escolher Plano",
     por_mes: "/mês",
+    implementacao: "implementação",
     mensagens_mes: "mensagens/mês",
     atendentes: "atendentes",
     plataforma_integracao: "plataforma de integração",
@@ -219,6 +222,8 @@ const translations = {
     //Global
     app_name: "Chatlog",
     rtech: "RTech",
+    instagram_url: "https://www.instagram.com/rtech_solution",
+    linkedin_url: "https://www.linkedin.com/company/r-techsolution",
 
     // Header
     inicio: "Home",
@@ -226,7 +231,7 @@ const translations = {
     beneficios: "Benefits", 
     precos: "Pricing",
     faq: "FAQ",
-    free_trial: "Free trial for 7 days",
+    teste_gratis: "Free trial for 3 days",
 
     // Hero
     revolucione_atendimento: "Revolutionize your customer service with AI",
@@ -309,8 +314,8 @@ const translations = {
     leads_qualificados_desc: "Capture and qualify leads automatically, even when you're not online.",
     implementacao_24h: "Implementation in 24h",
     implementacao_24h_desc: "Set up your chatbot in less than a day and start seeing results immediately.",
-    comprehensive_market: "Comprehensive market",
-    solucao_completa: "A complete solution for companies that want to better serve and increase their sales. We serve a wide range of sectors and have no limits to improve your business.",
+    mercado_abrangente: "Comprehensive market",
+    solucao_completa: "A complete solution for companies that want to better serve and increase their sales. We serve a wide range of business and have no limits to improve your business.",
     para_quem_chatlog: "Who is",
     for: " for",
     empresa_otimizar: "Companies that want to optimize customer service",
@@ -334,6 +339,7 @@ const translations = {
     comecar_agora: "Get Started Now",
     escolher_plano: "Choose Plan",
     por_mes: "/month",
+    implementacao: "implementation",
     mensagens_mes: "messages/month",
     atendentes: "agents",
     plataforma_integracao: "integration platform",

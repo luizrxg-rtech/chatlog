@@ -34,8 +34,8 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: t("instagram_url"), label: "Instagram" },
+    { icon: Linkedin, href: t("linkedin_url"), label: "LinkedIn" },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
             >
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-white" />
+                  <MessageCircle className="w-6 h-6 text-foreground" />
                 </div>
                 <span className="text-xl font-bold text-foreground">{t("app_name")}</span>
               </div>
@@ -83,6 +83,7 @@ const Footer = () => {
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
+                    target="_blank"
                     href={social.href}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -148,7 +149,7 @@ const Footer = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
                 {t("inscrever")}
               </motion.button>

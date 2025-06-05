@@ -15,6 +15,7 @@ const PricingSection = () => {
     {
       name: t("starter"),
       price: "897",
+      implementation: '1.097',
       description: t("pequenos_negocios"),
       icon: Rocket,
       popular: false,
@@ -28,7 +29,8 @@ const PricingSection = () => {
     },
     {
       name: t("professional"),
-      price: "1697",
+      price: "1.697",
+      implementation: '1.097',
       description: t("empresas_crescimento"),
       icon: Star,
       popular: true,
@@ -44,7 +46,8 @@ const PricingSection = () => {
     },
     {
       name: t("enterprise"),
-      price: "2397",
+      price: "2.397",
+      implementation: '1.097',
       description: t("grandes_empresas"),
       icon: Crown,
       popular: false,
@@ -113,14 +116,9 @@ const PricingSection = () => {
               className={`relative group ${plan.popular ? 'md:-translate-y-4' : ''}`}
             >
               {plan.popular && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium"
-                >
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-500 to-primary-600 text-foreground px-4 py-2 rounded-full text-sm font-medium">
                   {t("mais_popular")}
-                </motion.div>
+                </div>
               )}
 
               <div className={`bg-card border ${plan.popular ? 'border-primary-500 shadow-lg shadow-primary-500/20' : 'border-border'} rounded-2xl p-8 h-full hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10`}>
@@ -137,16 +135,20 @@ const PricingSection = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
                   <p className="text-muted-foreground mb-4">{plan.description}</p>
 
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-foreground">R$ {plan.price}</span>
-                    <span className="text-muted-foreground">{t("por_mes")}</span>
+                  <div className="mb-4 flex flex-col items-center gap-2">
+                    <div>
+                      <span className="text-4xl font-bold text-foreground">R$ {plan.price}</span>
+                      <span className="text-muted-foreground">{t("por_mes")}</span>
+                    </div>
+                    <span className="text-muted-foreground">+ R$ {plan.implementation} {t("implementacao")} </span>
                   </div>
+
 
                   <Button 
                     className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-white'
-                        : 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-800 hover:to-primary-900 text-foreground'
+                        : 'bg-gray-800 hover:bg-gray-700 text-foreground border border-gray-600'
                     }`}
                   >
                     {plan.popular ? t("comecar_agora") : t("escolher_plano")}
@@ -164,7 +166,7 @@ const PricingSection = () => {
                       className="flex items-center space-x-3"
                     >
                       <Check className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
+                      <span className="text-foreground">{feature}</span>
                     </motion.div>
                   ))}
                 </div>

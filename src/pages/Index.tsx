@@ -7,6 +7,7 @@ import AgentModelsSection from "@/components/AgentModelsSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import "@/App.css";
 
 const Index = () => {
   return (

@@ -109,7 +109,7 @@ const BenefitsSection = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                   className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center mb-6 relative z-10 group-hover:shadow-lg transition-all duration-300`}
                 >
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-foreground" />
                 </motion.div>
 
                 <h3 className="text-xl font-bold text-foreground mb-4 relative z-10">

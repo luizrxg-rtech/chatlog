@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+				'rethink': ['Rethink Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

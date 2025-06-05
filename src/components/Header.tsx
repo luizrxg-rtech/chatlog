@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, MessageCircle, Globe } from "lucide-react";
+import {Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -33,24 +33,29 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`mx-auto md:max-w-[1420px] md:fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
+      className={`mx-auto md:max-w-[1390px] md:fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'md:bg-background/70 md:backdrop-blur-xl md:rounded-2xl md:shadow-lg md:shadow-black/20' 
           : ''
       }`}
     >
-      <div className="w-full mx-auto p-6 md:py-3 ">
+      <div className="w-full mx-auto p-6 md:p-3 ">
         <div className="flex items-center justify-between space-x-8">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
-          >
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-              <MessageCircle className="w-6 h-6 text-white" />
+          <div className="flex items-center space-x-3">
+            <div className="min-w-10 min-h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+              <img
+                alt="Logo"
+                src="logo-icon.svg"
+                className="size-6 min-w-6 min-h-6"
+              />
             </div>
-            <span className="text-xl font-bold text-foreground">{t("app_name")}</span>
-          </motion.div>
+            <img
+              alt="Logo"
+              src="logo-text.svg"
+              className="min-h-4 mt-2"
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
