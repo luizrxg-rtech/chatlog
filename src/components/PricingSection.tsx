@@ -77,7 +77,7 @@ const PricingSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
             {t("planos_flexiveis")}
@@ -116,18 +116,18 @@ const PricingSection = () => {
               className={`relative group ${plan.popular ? 'md:-translate-y-4' : ''}`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-500 to-primary-600 text-foreground px-4 py-2 rounded-full text-sm font-medium">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-400 to-primary-600 text-foreground px-4 py-2 rounded-full text-sm font-medium">
                   {t("mais_popular")}
                 </div>
               )}
 
-              <div className={`bg-card border ${plan.popular ? 'border-primary-500 shadow-lg shadow-primary-500/20' : 'border-border'} rounded-2xl p-8 h-full hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10`}>
+              <div className={`bg-card border ${plan.popular ? 'border-primary-400 shadow-lg shadow-primary-400/20' : 'border-border'} rounded-2xl p-8 h-full hover:border-primary-600/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/10`}>
                 {/* Plan Header */}
                 <div className="text-center mb-8">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-600/20 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+                    className="w-16 h-16 bg-gradient-to-br from-primary-400/20 to-primary-600/20 rounded-2xl flex items-center justify-center mb-6 mx-auto"
                   >
                     <plan.icon className="w-8 h-8 text-primary-400" />
                   </motion.div>
@@ -147,7 +147,7 @@ const PricingSection = () => {
                   <Button 
                     className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground'
+                        ? 'bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 text-foreground'
                         : 'bg-gray-800 hover:bg-gray-700 text-foreground border border-gray-600'
                     }`}
                   >

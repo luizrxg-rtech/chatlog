@@ -51,11 +51,19 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="space-y-4"
             >
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-foreground" />
+              <div className="flex items-center gap-3 relative">
+                <div className="min-w-10 min-h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center hover:animate-spin">
                 </div>
-                <span className="text-xl font-bold text-foreground">{t("app_name")}</span>
+                <img
+                    alt="Logo"
+                    src="logo-icon.svg"
+                    className="size-6 min-w-6 min-h-6 absolute pointer-events-none left-2"
+                />
+                <img
+                    alt="Logo"
+                    src="logo-text.svg"
+                    className="min-h-6 h-6 mt-2"
+                />
               </div>
 
               <p className="text-muted-foreground leading-relaxed max-w-md">
@@ -81,17 +89,15 @@ const Footer = () => {
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
-                  <motion.a
+                  <a
                     key={index}
                     target="_blank"
                     href={social.href}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-400 hover:bg-primary-500/20 transition-colors"
+                    className="w-10 h-10 bg-gradient-to-br from-primary-400/10 to-primary-600/10 rounded-lg flex items-center justify-center text-primary-400 hover:bg-primary-400/20 transition-colors"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
-                  </motion.a>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -129,7 +135,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-primary-600/10 to-primary-500/10 border border-primary-500/20 rounded-xl p-6 mb-8"
+          className="bg-gradient-to-r from-primary-600/10 to-primary-400/10 rounded-xl p-6 mb-8"
         >
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
@@ -144,12 +150,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder={t("seu_email")}
-                className="flex-1 bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 bg-background rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                className="bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
                 {t("inscrever")}
               </motion.button>

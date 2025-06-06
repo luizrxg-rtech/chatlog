@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { 
-  MessageCircle, 
-  ShoppingCart, 
-  Calendar, 
-  Wrench
-} from "lucide-react";
+import {MessageCircle, ShoppingCart, Calendar, Wrench} from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const AgentModelsSection = () => {
@@ -51,7 +46,7 @@ const AgentModelsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <MessageCircle className="w-4 h-4 mr-2" />
             {t("solucoes_prontas")}
@@ -88,16 +83,9 @@ const AgentModelsSection = () => {
               transition={{ delay: 0.1 * index, duration: 0.6 }}
               className="group"
             >
-              <div className="bg-card backdrop-blur-xl bg-gradient-to-br from-primary-600/10 to-primary-500/10 rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300"
-                >
-                  <model.icon className="w-6 h-6 text-foreground " />
-                </motion.div>
-
-                <h3 className="w-fit text-lg font-semibold text-foreground mb-3 bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text group-hover:text-transparent transition-colors">
+              <div className={`bg-card backdrop-blur-xl ${index % 2 ? "bg-gradient-to-tl" : "bg-gradient-to-br"} from-primary-400/10 to-primary-600/10 rounded-xl p-6 h-full hover:border-primary-600/50 hover:shadow-primary-600/10 hover:shadow-lg transition-all duration-300`}>
+                <model.icon className={`w-8 h-8 text-foreground my-2 `} />
+                <h3 className={`w-fit text-lg font-semibold text-foreground mb-3 mt-5 ${index % 2 ? "bg-gradient-to-tl" : "bg-gradient-to-br"} from-primary-400 to-primary-600 bg-clip-text group-hover:text-transparent transition-colors`}>
                   {model.title}
                 </h3>
 

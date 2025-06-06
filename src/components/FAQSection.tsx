@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const FAQSection = () => {
@@ -68,7 +69,7 @@ const FAQSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <HelpCircle className="w-4 h-4 mr-2" />
             {t("perguntas_frequentes")}
@@ -80,8 +81,8 @@ const FAQSection = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl lg:text-5xl font-bold mb-6"
           >
-            <span className="text-foreground">{t("tire_suas")}</span>
-            <br />
+            <span className="text-foreground">{t("respostas_para_suas")}</span>
+            <br/>
             <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
               {t("duvidas")}
             </span>
@@ -108,12 +109,14 @@ const FAQSection = () => {
               >
                 <AccordionItem 
                   value={`item-${index}`} 
-                  className="bg-card border border-border rounded-xl px-6 hover:border-primary-500/50 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-600/20 to-gray-800/20 rounded-xl px-6 border-none transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary-400 transition-colors [&[data-state=open]]:text-primary-400">
-                    {faq.question}
+                  <AccordionTrigger className="hover:no-underline text-left font-semibold text-foreground hover:text-transparent [&[data-state=open]]:text-transparent"                  >
+                    <span className="transition-colors bg-gradient-to-r bg-clip-text from-primary-400 to-primary-600">
+                      {faq.question}
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -129,8 +132,8 @@ const FAQSection = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-600/10 to-primary-500/10 border border-primary-500/20 rounded-xl p-8 max-w-2xl mx-auto">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-600/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+          <div className="bg-gradient-to-r from-primary-600/10 to-primary-400/10 rounded-xl p-8 max-w-2xl mx-auto">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-400/20 to-primary-600/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
               <HelpCircle className="w-8 h-8 text-primary-400" />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -140,20 +143,17 @@ const FAQSection = () => {
               {t("equipe_especialistas")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
+              <Button
+                className="bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 px-8 py-4 group "
               >
                 {t("falar_especialista")}
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-primary-500 text-primary-400 hover:bg-primary-500/10 px-6 py-3 rounded-lg font-medium transition-all duration-200"
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-foreground px-8 py-4 hover:bg-gradient-to-r from-primary-400/10 to-primary-600/10"
               >
                 {t("agendar_demonstracao")}
-              </motion.button>
+              </Button>
             </div>
           </div>
         </motion.div>

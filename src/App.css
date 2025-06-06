@@ -8,6 +8,6 @@
 }
 
 ::selection {
-  background: var(--color-primary-500);
+  background: var(--color-primary-400);
   color: var(--color-gray-300);
 }

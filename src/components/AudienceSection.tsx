@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  MessageCircle,
-  Brain,
-  Clock,
-  Users,
-  BarChart3,
-  Smartphone,
-  Globe,
-  Shield, Building, ShoppingCart, Briefcase, Hospital, TriangleIcon, TriangleRight, TriangleRightIcon
-} from "lucide-react";
+import {Brain, Users, Building, ShoppingCart, Briefcase, Hospital, TriangleRightIcon} from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const FeaturesSection = () => {
@@ -40,7 +31,7 @@ const FeaturesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <Brain className="w-4 h-4 mr-2" />
             {t("mercado_abrangente")}
@@ -53,6 +44,7 @@ const FeaturesSection = () => {
             className="text-4xl lg:text-5xl font-bold mb-6"
           >
             <span className="text-foreground">{t("para_quem_chatlog")}</span>{" "}
+            <br/>
             <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
               {t("app_name")}
             </span>
@@ -112,10 +104,10 @@ const FeaturesSection = () => {
                 >
                   <div className="flex">
                     <div className="min-w-12 min-h-12 w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-300 rounded-full flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-primary-500"/>
+                      <item.icon className="w-6 h-6 text-primary-400"/>
                     </div>
-                    <TriangleRightIcon className="min-w-6 min-h-6 translate-y-[-1px] rotate-90 fill-primary-500 stroke-primary-500 translate-x-2 scale-[-1]"/>
-                    <div className="transition-all rounded-b-3xl rounded-tr-3xl bg-primary-500 px-8 py-4 max-w-4xl relative">
+                    <TriangleRightIcon className="min-w-6 min-h-6 translate-y-[-1px] rotate-90 fill-primary-400 stroke-primary-400 translate-x-2 scale-[-1]"/>
+                    <div className="transition-all rounded-b-3xl rounded-tr-3xl bg-primary-400 px-8 py-4 max-w-4xl relative">
                       <p className="font-bold text-xl md:text-2xl text-gray-800">{item.text}</p>
                     </div>
                   </div>

@@ -162,7 +162,7 @@ const translations = {
 
     // FAQ
     perguntas_frequentes: "Perguntas Frequentes",
-    tire_suas: "Tire suas",
+    respostas_para_suas: "Respostas para suas",
     duvidas: "Dúvidas",
     encontre_respostas: "Encontre respostas para as principais dúvidas sobre nossa plataforma de chatbot.",
     ainda_duvidas: "Ainda tem dúvidas?",
@@ -372,7 +372,7 @@ const translations = {
 
     // FAQ
     perguntas_frequentes: "Frequently Asked Questions",
-    tire_suas: "Get your",
+    respostas_para_suas: "Get your",
     duvidas: "Questions Answered",
     encontre_respostas: "Find answers to the main questions about our chatbot platform.",
     ainda_duvidas: "Still have questions?",

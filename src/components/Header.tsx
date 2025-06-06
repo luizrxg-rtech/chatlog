@@ -43,7 +43,7 @@ const Header = () => {
         <div className="flex items-center justify-between space-x-8">
           {/* Logo */}
           <div className="flex items-center gap-3 relative">
-            <div className="min-w-12 min-h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center hover:animate-spin">
+            <div className="min-w-12 min-h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center hover:animate-spin">
             </div>
             <img
               alt="Logo"
@@ -86,7 +86,7 @@ const Header = () => {
             </Select>
 
             <a href="#precos">
-              <Button className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60">
+              <Button className="bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80">
                 {t("comecar_agora")}
               </Button>
             </a>
@@ -134,7 +134,7 @@ const Header = () => {
               </Select>
             </div>
 
-            <Button className="w-full mt-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-500/60 hover:to-primary-600/60">
+            <Button className="w-full mt-4 bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80">
               {t("comecar_agora")}
             </Button>
           </motion.nav>

@@ -55,7 +55,7 @@ const FeaturesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <Brain className="w-4 h-4 mr-2" />
             {t("recursos_poderosos")}
@@ -93,16 +93,16 @@ const FeaturesSection = () => {
               transition={{ delay: 0.1 * index, duration: 0.6 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10">
+              <div className="bg-gradient-to-br from-gray-600/20 to-gray-800/20 rounded-xl p-6 h-full hover:border-primary-600/50 hover:shadow-primary-600/10 hover:shadow-lg transition-all duration-300">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300"
+                  className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-primary-600/25 transition-all duration-300"
                 >
                   <feature.icon className="w-6 h-6 text-foreground" />
                 </motion.div>
 
-                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary-400 transition-colors">
+                <h3 className={`w-fit text-lg font-semibold text-foreground mb-3 ${index % 2 ? "bg-gradient-to-tl" : "bg-gradient-to-br"} from-primary-400 to-primary-600 bg-clip-text group-hover:text-transparent transition-colors`}>
                   {feature.title}
                 </h3>
 

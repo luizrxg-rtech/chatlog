@@ -43,17 +43,6 @@ export default {
 					900: colors.indigo[900],
 					950: colors.indigo[950],
 				},
-				// 50: '#f0fffe',
-				// 100: '#ccfffe',
-				// 200: '#99ffff',
-				// 300: '#5cfffe',
-				// 400: '#06f4f4',
-				// 500: '#09ffff',
-				// 600: '#00cccc',
-				// 700: '#0599a3',
-				// 800: '#0f7983',
-				// 900: '#13646c',
-				// 950: '#053f42',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'

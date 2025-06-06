@@ -33,7 +33,7 @@ const BenefitsSection = () => {
       icon: DollarSign,
       title: t("reducao_60_custos"),
       description: t("reducao_60_custos_desc"),
-      color: "from-primary-500 to-teal-600"
+      color: "from-primary-400 to-teal-600"
     },
     {
       icon: Target,
@@ -62,7 +62,7 @@ const BenefitsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary-400/10 rounded-full text-primary-400 text-sm font-medium mb-6"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             {t("resultados_comprovados")}
@@ -100,7 +100,7 @@ const BenefitsSection = () => {
               transition={{ delay: 0.1 * index, duration: 0.6 }}
               className="group relative"
             >
-              <div className="bg-card border border-border rounded-xl p-8 h-full hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 overflow-hidden">
+              <div className="bg-card border border-border rounded-xl p-8 h-full hover:border-primary-600/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/10 overflow-hidden">
                 {/* Background gradient */}
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${benefit.color} opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}></div>
 
@@ -121,7 +121,7 @@ const BenefitsSection = () => {
                 </p>
 
                 {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
               </div>
             </motion.div>
           ))}
