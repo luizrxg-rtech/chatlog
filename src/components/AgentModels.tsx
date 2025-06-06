@@ -34,7 +34,7 @@ const AgentModels = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-primary-950/10 to-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

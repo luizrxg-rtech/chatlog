@@ -37,7 +37,7 @@ const Hero = () => {
     <section
       id="inicio"
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary-950/20 lg:pt-20"
+      className="min-h-screen flex items-center justify-center lg:pt-20"
     >
       <div className="container mx-auto px-4 pb-20 pt-2 lg:pt-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
