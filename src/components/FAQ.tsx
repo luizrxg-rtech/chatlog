@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const FAQSection = () => {
+const FAQ = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.2,
@@ -162,4 +162,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQ;

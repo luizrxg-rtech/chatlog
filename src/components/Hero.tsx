@@ -4,7 +4,7 @@ import {ArrowRight, Brain, Zap} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {useLanguage} from "@/hooks/useLanguage";
 
-const HeroSection = () => {
+const Hero = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -224,4 +224,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

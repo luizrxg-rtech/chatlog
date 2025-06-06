@@ -4,7 +4,7 @@ import { Check, Star, Crown, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const PricingSection = () => {
+const Pricing = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.2,
@@ -179,4 +179,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection;
+export default Pricing;

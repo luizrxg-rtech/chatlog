@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const FeaturesSection = () => {
+const Features = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.2,
@@ -118,4 +118,4 @@ const FeaturesSection = () => {
   );
 };
 
-export default FeaturesSection;
+export default Features;

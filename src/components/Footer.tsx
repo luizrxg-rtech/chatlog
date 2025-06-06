@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
   const { t } = useLanguage();
-  const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     [t("produto")]: [
@@ -172,7 +171,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © {currentYear} {t("rtech")}. {t("todos_direitos")}
+              © {t("rtech")}. {t("todos_direitos")}
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">

@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { TrendingUp, UserCheck, Clock, DollarSign, Target, Zap, Building, ShoppingCart, Users, Briefcase, Hospital } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const BenefitsSection = () => {
+const Benefits = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.2,
@@ -131,4 +131,4 @@ const BenefitsSection = () => {
   );
 };
 
-export default BenefitsSection;
+export default Benefits;

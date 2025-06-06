@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import {MessageCircle, ShoppingCart, Calendar, Wrench} from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const AgentModelsSection = () => {
+const AgentModels = () => {
   const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.2,
@@ -101,4 +101,4 @@ const AgentModelsSection = () => {
   );
 };
 
-export default AgentModelsSection;
+export default AgentModels;
