@@ -143,18 +143,18 @@ const Hero = () => {
                           initial={{ opacity: 0, x: -20 }}
                           animate={inView ? { opacity: 1, x: 0 } : {}}
                           transition={{ delay: 1 + index,  duration: 0.5 }}
-                          className="bg-primary-600 rounded-lg p-3 w-fit max-w-xs mr-auto"
+                          className="bg-primary-400 rounded-lg p-3 w-fit max-w-xs mr-auto"
                         >
-                          <p className="text-sm font-bold text-gray-300 text-start">{msg.message}</p>
+                          <p className="text-sm font-bold text-gray-800 text-start">{msg.message}</p>
                         </motion.div> :
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, x: 20 }}
                           animate={inView ? { opacity: 1, x: 0 } : {}}
                           transition={{ delay: 1 + index, duration: 0.5 }}
-                          className="bg-primary-400 rounded-lg p-3 w-fit max-w-xs ml-auto"
+                          className="bg-primary-600 rounded-lg p-3 w-fit max-w-xs ml-auto"
                         >
-                          <p className="text-sm font-bold text-gray-800 text-start">{msg.message}</p>
+                          <p className="text-sm font-bold text-gray-300 text-start">{msg.message}</p>
                         </motion.div>
                     )}
                   </div>
