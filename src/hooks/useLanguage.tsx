@@ -13,6 +13,10 @@ const globals = {
   rtech: "RTech",
   instagram_url: "https://www.instagram.com/rtech_solution",
   linkedin_url: "https://www.linkedin.com/company/r-techsolution",
+  email: "contato@rtechsolution.com.br",
+  phone: "(34) 99681-7814",
+  phone_plain: "34996817814",
+  location: "Uberlândia, MG",
   portugues_brasil: "Portuguese (Brazil)",
   ingles: "English"
 }

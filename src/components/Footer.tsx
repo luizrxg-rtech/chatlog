@@ -5,6 +5,7 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser'
 import {useToast} from "@/hooks/use-toast.ts";
 import { Button } from "@/components/ui/button";
+import { Whatsapp} from "@/components/ui/custom-icons.tsx";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -65,8 +66,21 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: t("instagram_url"), label: "Instagram" },
-    { icon: Linkedin, href: t("linkedin_url"), label: "LinkedIn" },
+    {
+      icon: () => <Whatsapp className="w-5 h-5 fill-primary-400"/>,
+      href: 'https://wa.me/' + t('phone_plain'),
+      label: "Whatsapp"
+    },
+    {
+      icon: Instagram,
+      href: t("instagram_url"),
+      label: "Instagram"
+    },
+    {
+      icon: Linkedin,
+      href: t("linkedin_url"),
+      label: "LinkedIn"
+    },
   ];
 
   return (
@@ -105,15 +119,15 @@ const Footer = () => {
               <div className="space-y-2">
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="w-4 h-4 text-primary-400" />
-                  <span className="text-sm">contato@rtechsolution.com.br</span>
+                  <span className="text-sm">{t('email')}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Phone className="w-4 h-4 text-primary-400" />
-                  <span className="text-sm">+55 (34) 99681-7814</span>
+                  <span className="text-sm">{t('phone')}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <MapPin className="w-4 h-4 text-primary-400" />
-                  <span className="text-sm">Uberlândia, MG - Brasil</span>
+                  <span className="text-sm">{t('location')}</span>
                 </div>
               </div>
 
@@ -181,7 +195,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder={t('seu_email')}
-                className="flex-1 bg-background rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
+                className="w-full bg-background rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />

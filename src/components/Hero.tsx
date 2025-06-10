@@ -199,7 +199,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
         >
           {stats.map((stat, index) => (
             <motion.div
