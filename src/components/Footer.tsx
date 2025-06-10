@@ -1,9 +1,41 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
+import { useState } from "react";
+import emailjs from '@emailjs/browser'
+import {useToast} from "@/hooks/use-toast.ts";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true)
+
+    try {
+      emailjs.init(__EMAIL_API_KEY__);
+
+      await emailjs.send(
+        __EMAIL_SERVICE_KEY__,
+        __EMAIL_TEMPLATE_KEY__,
+        { email: email }
+      );
+
+      setLoading(false)
+      toast({ title: t('inscricao_sucesso'), duration: 3000})
+      setEmail('');
+
+    } catch (error) {
+      setLoading(false)
+      toast({ title: t('inscricao_erro'), duration: 3000})
+      console.error('Failed to send email:', error);
+    }
+  };
 
   const footerLinks = {
     [t("produto")]: [
@@ -66,7 +98,7 @@ const Footer = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed max-w-md">
-                {t("revolucione_atendimento_footer")}
+                {t('revolucione_atendimento_footer')}
               </p>
 
               {/* Contact Info */}
@@ -139,26 +171,28 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">
-                {t("fique_novidades")}
+                {t('fique_novidades')}
               </h3>
               <p className="text-muted-foreground">
-                {t("receba_dicas")}
+                {t('receba_dicas')}
               </p>
             </div>
-            <div className="flex space-x-3">
+            <form onSubmit={handleSubmit} className="flex flex-row space-x-3">
               <input
                 type="email"
-                placeholder={t("seu_email")}
+                placeholder={t('seu_email')}
                 className="flex-1 bg-background rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200"
+              <Button
+                type="submit"
+                className="text-md bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 px-8 py-6"
               >
-                {t("inscrever")}
-              </motion.button>
-            </div>
+                {loading && <div className="absolute border-4 border-foreground/50 border-b-foreground animate-spin rounded-full w-5 h-5 mx-auto" />}
+                <span className={loading && "text-transparent"}>{t('inscrever')}</span>
+              </Button>
+            </form>
           </div>
         </motion.div>
 
@@ -171,19 +205,19 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © {t("rtech")}. {t("todos_direitos")}
+              © 2025 {t('rtech')}. {t('todos_direitos')}
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-primary-400 transition-colors">
-                  {t("privacidade")}
+                  {t('privacidade')}
                 </a>
                 <a href="#" className="hover:text-primary-400 transition-colors">
-                  {t("termos")}
+                  {t('termos')}
                 </a>
                 <a href="#" className="hover:text-primary-400 transition-colors">
-                  {t("lgpd")}
+                  {t('lgpd')}
                 </a>
               </div>
             </div>

@@ -15,51 +15,60 @@ const Pricing = () => {
     {
       name: t("starter"),
       price: "897",
-      implementation: '1.097',
-      description: t("pequenos_negocios"),
+      implementation: '1.000',
       icon: Rocket,
       popular: false,
       features: [
-        `5 ${t("atendentes")}`,
-        `1 ${t("plataforma_integracao")}`,
-        t("suporte_email"),
-        t("dashboard_basico"),
-        t("configuracao_inicial")
+        '5 ' + t('atendentes'),
+        t('chatbot_ilimitado'),
+        t('atendimento_setor'),
+        t('atendentes_simultaneos'),
+        t('robo_24'),
+        t('visualizacao_tempo_real'),
       ]
     },
     {
-      name: t("professional"),
+      name: t("business"),
       price: "1.697",
-      implementation: '1.097',
-      description: t("empresas_crescimento"),
+      implementation: '1.000',
       icon: Star,
+      popular: false,
+      features: [
+        '10 ' + t('atendentes'),
+        t('chatbot_ilimitado'),
+        t('atendimento_setor'),
+        t('atendentes_simultaneos'),
+        t('robo_24'),
+        t('visualizacao_tempo_real'),
+      ]
+    },
+    {
+      name: t("empresarial"),
+      price: "2.397",
+      implementation: '1.000',
+      icon: Crown,
       popular: true,
       features: [
-        `10 ${t("atendentes")}`,
-        t("todas_plataformas"),
-        `${t("suporte_prioritario")} 24/7`,
-        t("analytics_avancado"),
-        t("ia_personalizada"),
-        t("integracao_crm"),
-        t("treinamento_incluso")
+        '15 ' + t('atendentes'),
+        'Tudo do plano ' + t('business'),
+        t('atendimento_humanizado'),
+        t('suporte_prioritario'),
+        t('gestor_conta'),
+        t('integracao_crm'),
+        t('treinamento_apoio'),
       ]
     },
     {
       name: t("enterprise"),
       price: "2.397",
-      implementation: '1.097',
-      description: t("grandes_empresas"),
+      implementation: '1.000',
       icon: Crown,
       popular: false,
       features: [
-        `15 ${t("atendentes")}`,
-        t("todas_funcionalidades"),
-        t("gerente_conta"),
-        t("sla_garantido"),
-        t("customizacao_completa"),
-        t("api_dedicada"),
-        t("suporte_tecnico_premium"),
-        t("consultoria_estrategica")
+        '100 ' + t('atendentes'),
+        'Tudo do plano ' + t('empresarial'),
+        t('suporte_prioritario_24'),
+        t('consultoria_estrategica'),
       ]
     }
   ];
@@ -106,7 +115,7 @@ const Pricing = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -133,7 +142,6 @@ const Pricing = () => {
                   </motion.div>
 
                   <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
-                  <p className="text-muted-foreground mb-4">{plan.description}</p>
 
                   <div className="mb-4 flex flex-col items-center gap-2">
                     <div>

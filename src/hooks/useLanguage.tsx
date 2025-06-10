@@ -8,14 +8,17 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
+const globals = {
+  app_name: "Chatlog",
+  rtech: "RTech",
+  instagram_url: "https://www.instagram.com/rtech_solution",
+  linkedin_url: "https://www.linkedin.com/company/r-techsolution",
+  portugues_brasil: "Portuguese (Brazil)",
+  ingles: "English"
+}
+
 const translations = {
   pt: {
-    //Global
-    app_name: "Chatlog",
-    rtech: "RTech",
-    instagram_url: "https://www.instagram.com/rtech_solution",
-    linkedin_url: "https://www.linkedin.com/company/r-techsolution",
-
     // Header
     inicio: "Início",
     recursos: "Recursos", 
@@ -120,7 +123,8 @@ const translations = {
     ideal_para_negocio: "Ideal para seu Negócio",
     sem_contratos: "Sem contratos longos, sem taxas ocultas. Comece grátis e escale conforme cresce.",
     starter: "Starter",
-    professional: "Professional",
+    business: "Business",
+    empresarial: "Empresarial",
     enterprise: "Enterprise",
     pequenos_negocios: "Perfeito para pequenos negócios",
     empresas_crescimento: "Ideal para empresas em crescimento",
@@ -132,33 +136,18 @@ const translations = {
     implementacao: "implementação",
     mensagens_mes: "mensagens/mês",
     atendentes: "atendentes",
-    plataforma_integracao: "plataforma de integração",
-    todas_plataformas: "Todas plataformas",
-    dashboard_basico: "Dashboard básico",
-    analytics_avancado: "Analytics avançado",
-    ia_personalizada: "IA personalizada",
-    integracao_crm: "Integração com CRM",
-    treinamento_incluso: "Treinamento incluso",
-    mensagens_ilimitadas: "Mensagens ilimitadas",
-    todas_funcionalidades: "Todas as funcionalidades",
-    gerente_conta: "Gerente de conta dedicado",
-    sla_garantido: "SLA garantido",
-    customizacao_completa: "Customização completa",
-    api_dedicada: "API dedicada",
-    suporte_tecnico_premium: "Suporte técnico premium",
-    consultoria_estrategica: "Consultoria estratégica",
-    configuracao_inicial: "Configuração inicial",
-    garantia_30_dias: "Garantia de 30 dias",
-    devolucao_dinheiro: "Não satisfeito? Devolvemos 100% do seu dinheiro",
-    basico: "Básico",
-    profissional: "Profissional",
-    empresarial: "Empresarial",
-    conversas_mes: "conversas/mês",
-    integracao: "integração",
-    integracoes: "integrações",
-    suporte_email: "Suporte por email",
+    chatbot_ilimitado: "Chatbot ilimitado",
+    atendimento_setor: "Atendimento por setor",
+    atendentes_simultaneos: "Atendentes simultâneos",
+    robo_24: "Robô 24h por dia",
+    visualizacao_tempo_real: "Visualização em tempo real da equipe",
+    atendimento_humanizado: "Atendimento humanizado 24/7 com I.A",
     suporte_prioritario: "Suporte prioritário",
-    suporte_dedicado: "Suporte dedicado",
+    suporte_prioritario_24: "Suporte prioritário 24/7",
+    gestor_conta: "Gestor de conta disponível",
+    integracao_crm: "Integração com CRM",
+    treinamento_apoio: "Treinamento e apoio",
+    consultoria_estrategica: "Consultoria estratégica",
 
     // FAQ
     perguntas_frequentes: "Perguntas Frequentes",
@@ -215,16 +204,10 @@ const translations = {
     receba_dicas: "Receba dicas, atualizações e cases de sucesso diretamente no seu email.",
     seu_email: "Seu melhor email",
     inscrever: "Inscrever",
-    portugues_brasil: "Português (Brasil)",
-    ingles: "English"
+    inscricao_sucesso: "Inscrição realizada com sucesso !",
+    inscricao_erro: "Erro ao inscrever",
   },
   en: {
-    //Global
-    app_name: "Chatlog",
-    rtech: "RTech",
-    instagram_url: "https://www.instagram.com/rtech_solution",
-    linkedin_url: "https://www.linkedin.com/company/r-techsolution",
-
     // Header
     inicio: "Home",
     recursos: "Features",
@@ -330,7 +313,8 @@ const translations = {
     ideal_para_negocio: "Perfect for your Business",
     sem_contratos: "No long contracts, no hidden fees. Start free and scale as you grow.",
     starter: "Starter",
-    professional: "Professional",
+    business: "Business",
+    empresarial: "Corporate",
     enterprise: "Enterprise",
     pequenos_negocios: "Perfect for small businesses",
     empresas_crescimento: "Ideal for growing companies",
@@ -341,34 +325,6 @@ const translations = {
     por_mes: "/month",
     implementacao: "implementation",
     mensagens_mes: "messages/month",
-    atendentes: "agents",
-    plataforma_integracao: "integration platform",
-    todas_plataformas: "All platforms",
-    dashboard_basico: "Basic dashboard",
-    analytics_avancado: "Advanced analytics",
-    ia_personalizada: "Customized AI",
-    integracao_crm: "CRM integration",
-    treinamento_incluso: "Training included",
-    mensagens_ilimitadas: "Unlimited messages",
-    todas_funcionalidades: "All features",
-    gerente_conta: "Dedicated account manager",
-    sla_garantido: "Guaranteed SLA",
-    customizacao_completa: "Complete customization",
-    api_dedicada: "Dedicated API",
-    suporte_tecnico_premium: "Premium technical support",
-    consultoria_estrategica: "Strategic consulting",
-    configuracao_inicial: "Initial setup",
-    garantia_30_dias: "30-day guarantee",
-    devolucao_dinheiro: "Not satisfied? We'll refund 100% of your money",
-    basico: "Basic",
-    profissional: "Professional",
-    empresarial: "Enterprise",
-    conversas_mes: "conversations/month",
-    integracao: "integration",
-    integracoes: "integrations",
-    suporte_email: "Email support",
-    suporte_prioritario: "Priority support",
-    suporte_dedicado: "Dedicated support",
 
     // FAQ
     perguntas_frequentes: "Frequently Asked Questions",
@@ -425,10 +381,13 @@ const translations = {
     receba_dicas: "Receive tips, updates, and success stories directly in your email.",
     seu_email: "Your best email",
     inscrever: "Subscribe",
-    portugues_brasil: "Portuguese (Brazil)",
-    ingles: "English"
+    inscricao_sucesso: "Subscription completed successfully!",
+    inscricao_erro: "Error when subscribing",
   }
 };
+
+translations.pt = {...globals, ...translations.pt}
+translations.en = {...globals, ...translations.en}
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 

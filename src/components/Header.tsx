@@ -35,7 +35,7 @@ const Header = () => {
       transition={{ duration: 0.6 }}
       className={`mx-auto lg:max-w-[1390px] lg:fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'lg:bg-foreground/10 lg:backdrop-blur-xl lg:rounded-2xl lg:shadow-lg lg:shadow-black/20' 
+          ? 'lg:bg-background/10 lg:backdrop-blur-xl lg:rounded-2xl lg:shadow-lg lg:shadow-black/20' 
           : ''
       }`}
     >
@@ -119,6 +119,7 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
+
             {/* Mobile Language Selector */}
             <div className="mt-4">
               <Select value={language} onValueChange={(value: Language) => setLanguage(value)}>
