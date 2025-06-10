@@ -3,9 +3,9 @@ import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 import emailjs from '@emailjs/browser'
-import {useToast} from "@/hooks/use-toast.ts";
+import { useToast } from "@/hooks/use-toast.ts";
 import { Button } from "@/components/ui/button";
-import { Whatsapp} from "@/components/ui/custom-icons.tsx";
+import { Whatsapp } from "@/components/ui/custom-icons.tsx";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -201,6 +201,7 @@ const Footer = () => {
               />
               <Button
                 type="submit"
+                disabled={loading}
                 className="text-md bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-400/80 hover:to-primary-600/80 px-8 py-6"
               >
                 {loading && <div className="absolute border-4 border-foreground/50 border-b-foreground animate-spin rounded-full w-5 h-5 mx-auto" />}
