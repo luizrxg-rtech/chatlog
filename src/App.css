@@ -7,6 +7,10 @@
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background: var(--color-primary-400);
   color: var(--color-gray-300);
