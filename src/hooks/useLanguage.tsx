@@ -15,7 +15,7 @@ const globals = {
   linkedin_url: "https://www.linkedin.com/company/r-techsolution",
   email: "contato@rtechsolution.com.br",
   phone: "(34) 99681-7814",
-  phone_plain: "34996817814",
+  phone_plain: "+5534996817814",
   location: "Uberlândia, MG",
   portugues_brasil: "Portuguese (Brazil)",
   ingles: "English"
